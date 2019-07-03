@@ -1,0 +1,39 @@
+.about
+  background-color: $bg-color
+  &__img
+    display: block
+    border-radius: 4px
+    box-shadow: 2px 8px 24px rgba(0, 0, 0, 0.2)
+    +r(992)
+      margin: 0 auto
+  &__content
+    padding-left: 40px
+    color: $dark
+    +r(1200)
+      padding-left: 0
+    +r(767)
+      text-align: center
+    h2
+      +r(992)
+        text-align: center
+    p
+      strong
+        font-size: 18px
+        font-weight: 600
+    blockquote
+      margin: 20px 0
+      padding-left: 25px
+      border-left: 2px solid $dark
+      +r(767)
+        text-align: left
+      p
+        font-size: 18px
+        font-weight: 500
+        color: $darken
+        text-transform: uppercase
+        +r(767)
+          font-size: 16px
+        &:last-child
+          margin-bottom: 0
+
+@import 'about-numbers'

@@ -1,0 +1,33 @@
+.services-card
+  height: calc(100% - 30px)
+  margin-bottom: 30px
+  padding: 50px 30px 35px 35px
+  background-color: #fff
+  border-radius: 10px
+  box-shadow: 0 10px 40px rgba(51, 51, 51, 0.1)
+  +trans
+  &:hover
+    background-color: #010101
+    p
+      color: #fff
+    .services-card
+      &__title
+        color: #fff
+      &__link
+        color: #fff
+  p
+    +trans
+  &__title
+    margin-bottom: 15px
+    padding-bottom: 10px
+    font-size: 21px
+    font-weight: 600
+    color: $dark
+    letter-spacing: 0.1em
+    text-transform: uppercase
+    border-bottom: 1px solid #C4C4C4
+    +trans
+  &__link
+    font-weight: 600
+    color: $accent
+    text-decoration: underline

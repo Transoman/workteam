@@ -1,0 +1,89 @@
+.partners
+  z-index: 1
+  &::before
+    content: ''
+    position: absolute
+    top: 80px
+    right: 63%
+    z-index: -1
+    width: 470px
+    height: 460px
+    transform: rotate(-180deg)
+    background: url(images/general/shape.svg) no-repeat center / contain
+  .section-label
+    top: 80%
+  &__top
+    display: flex
+    align-items: center
+    margin-bottom: 40px
+    padding: 0 100px 0 75px
+    +r(992)
+      padding: 0
+    +r(767)
+      display: block
+      margin-bottom: 10px
+      h2
+        margin-bottom: 30px
+        text-align: center
+
+.partners-slider
+  margin: 0 -15px
+  padding: 15px
+  &__item
+    display: flex
+    align-items: center
+    justify-content: center
+    height: auto
+    padding: 15px 35px
+    background-color: #fff
+    border-radius: 10px
+    box-shadow: 0 7px 12px rgba(51, 51, 51, 0.1)
+
+.partners-slider-control
+  position: relative
+  display: flex
+  align-items: center
+  margin-left: auto
+  +r(767)
+    justify-content: space-between
+  .swiper-pagination
+    position: static
+    width: auto
+    margin-right: 35px
+    font-size: 16px
+    font-weight: 700
+    color: #ADADAD
+    &-current
+      font-size: 21px
+      color: $accent
+      margin-right: 5px
+    &-total
+      margin-left: 5px
+  &__btn
+    display: flex
+  .swiper-button-next, .swiper-button-prev
+    position: static
+    background: none
+    text-align: center
+    width: 65px
+    height: 60px
+    border: 1px solid $accent
+    margin: 0
+    line-height: 55px
+    +trans
+    &:hover
+      background-color: $accent
+      svg
+        fill: #fff
+    &:focus
+      outline: none
+    svg
+      width: 14px
+      height: 27px
+      fill: #C4C4C4
+      +trans
+  .swiper-button-next
+    border-radius: 0 50px 50px 0
+  .swiper-button-prev
+    border-radius: 50px 0 0 50px
+    margin-right: -1px

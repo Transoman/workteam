@@ -1,0 +1,85 @@
+.news
+  padding-top: 80px
+  +r(767)
+    padding-top: 40px
+  &::before
+    content: ''
+    position: absolute
+    bottom: 210px
+    right: 86%
+    width: 300px
+    height: 270px
+    background: url(images/general/shape.svg) no-repeat center / contain
+  &::after
+    content: ''
+    position: absolute
+    top: 100px
+    left: 83%
+    z-index: -1
+    width: 470px
+    height: 460px
+    transform: rotate(-180deg)
+    background: url(images/general/shape.svg) no-repeat center / contain
+
+.news-card
+  margin-bottom: 40px
+  &__img-wrap
+    position: relative
+    max-width: 370px
+    margin: 0 auto 25px
+    +r(767)
+      text-align: center
+    img
+      border-radius: 3px
+      box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.2)
+  &__title
+    margin: 0
+    font-size: 15px
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 0.1em
+    &::after
+      content: ''
+      display: block
+      width: 150px
+      height: 1px
+      margin: 15px 0 10px
+      background-color: #C4C4C4
+  &__excerpt
+    font-size: 12px
+    line-height: 1.5
+  &__more
+    font-size: 14px
+    font-weight: 600
+    color: $accent
+    text-decoration: underline
+  &__publish
+    position: absolute
+    top: 12px
+    left: 0
+    z-index: 1
+    display: flex
+    align-items: center
+    padding: 5px 15px 5px 10px
+    background-color: #fff
+    border-radius: 1px
+    &-left
+      margin-right: 10px
+    &-day
+      font-size: 31px
+      line-height: 1
+      color: $darken
+    &-month
+      display: block
+      font-size: 10px
+      font-weight: 500
+      color: $accent
+      text-transform: uppercase
+      line-height: 1
+    &-year
+      display: block
+      font-size: 12px
+      color: $darken
+      line-height: 1
+  &__content
+    line-height: 1.5

@@ -1,0 +1,46 @@
+.scroll-nav
+  position: fixed
+  top: 50%
+  right: 80px
+  transform: translateY(-50%)
+  z-index: 10
+  +r(1400)
+    right: 15px
+  +r(767)
+    display: none
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    &.is-active
+      a
+        color: #fff
+        &::after
+          background-color: #fff
+        &.mPS2id-highlight
+          color: $accent
+  li
+    margin-bottom: 10px
+    &:last-child
+      margin-bottom: 0
+      a
+        &.mPS2id-highlight
+          &.mPS2id-highlight-first.mPS2id-highlight-last
+            &::after
+              display: none
+  a
+    font-weight: 600
+    color: $darken
+    &.mPS2id-highlight
+      color: $accent
+      &.mPS2id-highlight-first.mPS2id-highlight-last
+        &::after
+          height: 60px
+    &::after
+      content: ''
+      display: block
+      margin: 15px auto
+      width: 2px
+      height: 0
+      background-color: $darken
+      +trans

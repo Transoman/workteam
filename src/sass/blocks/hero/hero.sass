@@ -1,0 +1,51 @@
+.hero
+  position: relative
+  z-index: 1
+  padding-top: 260px
+  padding-bottom: 130px
+  +r(992)
+    padding-top: 160px
+  +r(767)
+    padding-top: 130px
+    padding-bottom: 50px
+  &::before
+    content: ''
+    position: absolute
+    bottom: 180px
+    right: 86%
+    width: 300px
+    height: 270px
+    background: url(images/general/shape.svg) no-repeat center / contain
+  &::after
+    content: ''
+    position: absolute
+    top: -2px
+    left: 57%
+    z-index: -1
+    width: 855px
+    height: 845px
+    background: url(images/general/hero-img.png) no-repeat center / contain
+    +r(1200)
+      left: 58%
+    +r(992)
+      top: -100px
+      width: 495px
+      height: 490px
+    +r(767)
+      display: none
+  &__content
+    +r(767)
+      text-align: center
+    h1
+      margin-bottom: 15px
+    p
+      color: $dark
+      line-height: 1.7
+    .btn
+      margin-top: 30px
+      margin-bottom: 70px
+      +r(576)
+        margin-top: 20px
+        margin-bottom: 30px
+
+@import 'hero-adv'

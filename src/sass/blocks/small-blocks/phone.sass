@@ -1,0 +1,75 @@
+.phone
+  display: flex
+  +r(576)
+    flex-direction: column
+  &__item
+    position: relative
+    padding-left: 60px
+    margin-right: 85px
+    +r(1200)
+      margin-right: 30px
+    +r(767)
+      padding-left: 0
+    +r(576)
+      margin-right: 0
+      margin-bottom: 5px
+      text-align: right
+    &:last-child
+      margin-right: 0
+      .phone
+        &__tel
+          color: #fff
+          +r(767)
+            color: $darken
+          &:hover, &:focus
+            color: $accent
+        &__descr
+          color: #fff
+          +r(767)
+            color: $darken
+  &__tel
+    font-size: 24px
+    font-weight: 700
+    color: $darken
+    +r(767)
+      font-size: 16px
+    +r(576)
+      display: block
+      font-size: 14px
+  &__descr
+    margin: 0
+    font-size: 16px
+    font-weight: 600
+    color: $darken
+    +r(767)
+      font-size: 12px
+    +r(576)
+      display: none
+  &__link
+    font-size: 16px
+    font-weight: 900
+    color: $accent
+    text-decoration: underline
+    +r(767)
+      font-size: 13px
+    +r(576)
+      font-size: 12px
+    &:hover, &:focus
+      color: lighten($accent, 10%)
+  &__icon
+    width: 15px
+    height: 15px
+    fill: #fff
+    &-wrap
+      position: absolute
+      top: 0
+      left: 0
+      width: 36px
+      height: 36px
+      border-radius: 50%
+      background-color: $accent
+      box-shadow: 0 10px 30px rgba(244, 183, 18, 0.5)
+      text-align: center
+      line-height: 34px
+      +r(767)
+        display: none

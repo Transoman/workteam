@@ -1,0 +1,26 @@
+.footer
+  padding: 37px 0
+  background-color: #F1F1F1
+  border-top: 2px solid #fff
+  +r(576)
+    padding: 25px 0
+  .container
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    +r(576)
+      display: block
+      text-align: center
+      & > *:not(:last-child)
+        margin-bottom: 10px
+  a
+    font-weight: 500
+    color: $main-color
+    text-decoration: underline
+    &:hover, &:focus
+      color: $accent
+
+.copy
+  margin: 0
+  font-weight: 500
