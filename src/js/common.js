@@ -21,6 +21,7 @@ jQuery(document).ready(function($) {
     transition: 'all 0.3s',
     onclose: function() {
       $(this).find('label.error').remove();
+      $(this).find('.wpcf7-response-output').hide();
     }
   });
 
@@ -97,7 +98,10 @@ jQuery(document).ready(function($) {
     $('#order-vacancy form').find('input[name="vacancy-name"]').val(title);
   });
 
-  $('.scroll-nav a').mPageScroll2id();
+  $('.scroll-nav a').mPageScroll2id({
+    highlightSelector: '.scroll-nav a',
+    forceSingleHighlight: true
+  });
 
   $(window).scroll(function() {
     if ($('.scroll-nav a[href="#hero"]').hasClass('mPS2id-highlight')) {
@@ -155,6 +159,7 @@ jQuery(document).ready(function($) {
             transition: 'all 0.3s',
             onclose: function() {
               $(this).find('label.error').remove();
+              $(this).find('.wpcf7-response-output').hide();
             }
           });
         } else {
