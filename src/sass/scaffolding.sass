@@ -102,7 +102,7 @@ section
   color: #fff
   text-align: center
   letter-spacing: 0.05em
-  background-color: #010101
+  background-color: $accent
   border: 0
   outline: none
   text-decoration: none
@@ -119,11 +119,10 @@ section
     padding: 20px 30px
   &:hover
     color: #fff
-    background-color: $accent
-    //background-color: lighten($accent, 5%)
+    background-color: $title-color
   &:focus
     color: #fff
-    background-color: darken($accent, 5%)
+    background-color: lighten($title-color, 15%)
     outline: none
   &[disabled]
     background-color: #e5e5e5
