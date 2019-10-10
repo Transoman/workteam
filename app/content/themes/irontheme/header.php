@@ -15,7 +15,7 @@
 <body <?php body_class(); ?>>
 
 <div class="wrapper">
-  <header class="header">
+  <header class="header<?php echo !is_home() && !is_front_page() ? ' header--inner': ''; ?>">
     <div class="container">
 
       <div class="logo header__logo">
@@ -24,22 +24,26 @@
       </div>
       
       <div class="phone header__phone">
-        <div class="phone__item">
-          <div class="phone__icon-wrap">
-            <?php ith_the_icon('phone', 'phone__icon'); ?>
+        <?php if (get_field('phone_1', 'option')): ?>
+          <div class="phone__item">
+            <div class="phone__icon-wrap">
+              <?php ith_the_icon('phone', 'phone__icon'); ?>
+            </div>
+            <a href="tel:<?php echo preg_replace( '![^0-9\+]+!', '', get_field('phone_1', 'option') ); ?>" class="phone__tel"><?php the_field('phone_1', 'option'); ?></a>
+            <p class="phone__descr"><?php the_field('phone_descr_1', 'option'); ?></p>
+            <a href="#" class="phone__link callback_open">Обратный звонок</a>
           </div>
-          <a href="tel:<?php echo preg_replace( '![^0-9\+]+!', '', get_field('phone_1', 'option') ); ?>" class="phone__tel"><?php the_field('phone_1', 'option'); ?></a>
-          <p class="phone__descr"><?php the_field('phone_descr_1', 'option'); ?></p>
-          <a href="#" class="phone__link callback_open">Обратный звонок</a>
-        </div>
-        <div class="phone__item">
-          <div class="phone__icon-wrap">
-            <?php ith_the_icon('phone', 'phone__icon'); ?>
+        <?php endif; ?>
+        <?php if (get_field('phone_2', 'option')): ?>
+          <div class="phone__item">
+            <div class="phone__icon-wrap">
+              <?php ith_the_icon('phone', 'phone__icon'); ?>
+            </div>
+            <a href="tel:<?php echo preg_replace( '![^0-9\+]+!', '', get_field('phone_2', 'option') ); ?>" class="phone__tel"><?php the_field('phone_2', 'option'); ?></a>
+            <p class="phone__descr"><?php the_field('phone_descr_2', 'option'); ?></p>
+            <a href="#" class="phone__link consultation_open">Заказать консультацию</a>
           </div>
-          <a href="tel:<?php echo preg_replace( '![^0-9\+]+!', '', get_field('phone_2', 'option') ); ?>" class="phone__tel"><?php the_field('phone_2', 'option'); ?></a>
-          <p class="phone__descr"><?php the_field('phone_descr_2', 'option'); ?></p>
-          <a href="#" class="phone__link consultation_open">Заказать консультацию</a>
-        </div>
+        <?php endif; ?>
       </div>
       
     </div>
